@@ -26,7 +26,6 @@ lines = []
 for tau in [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]:
     command = command_base.format('lr_' if args.lr else 'cnn_', args.data, gendata, tau)
     logpath = logpath_base.format(dataset, gendata, tau, 'lr' if args.lr else 'cnn')
->>>>>>> 79c3894b4261bc42860552577c05877983aaf8d6
     lines.append(command + ' > ' + logpath)
 
 script_name = '{0}.{1}.{2}.sh'.format(dataset, gendata, 'lr' if args.lr else 'cnn')
