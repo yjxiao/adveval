@@ -21,7 +21,7 @@ command_base = 'python main.py --data={0} --gendata={1} --tau={2}'
 dataset = args.data.rstrip('/').split('/')[-1]
 logpath_base = 'logs/{0}/{1}.tau{2:.1f}.log'
 lines = []
-for tau in [0.1, 0.3, 0.5, 0.7, 0.9]:
+for tau in [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]:
     command = command_base.format(args.data, gendata, tau)
     logpath = logpath_base.format(dataset, gendata, tau)
     lines.append(command + ' > ' + logpath)
