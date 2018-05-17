@@ -20,3 +20,12 @@ class CNNClassifier(nn.Module):
         code = self.drop(torch.cat(codes, dim=1))
         # probs of shape: batch_size x num_classes
         return self.labeler(code)
+
+
+class LogisticRegressor(nn.Module):
+    def __init__(self, input_size, num_classes):
+        super().__init__()
+        self.fc = nn.Linear(input_size, num_classes)
+
+    def forward(self, inputs):
+        return self.fc(inputs)
