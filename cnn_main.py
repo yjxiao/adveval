@@ -88,7 +88,7 @@ def train(data_sources, tau, model, criterion, optimizer, device):
 
 def get_savepath(args):
     dataset = args.data.rstrip('/').split('/')[-1]
-    return './saves/{0}.tau{1:.1f}.{2}.ptb'.format(args.gendata, args.tau, dataset)
+    return './saves/{0}.tau{1:.1f}.cnn.{2}.pt'.format(args.gendata, args.tau, dataset)
 
 
 def main(args):
