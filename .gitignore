@@ -1,0 +1,8 @@
+*~
+*.pt
+*.log
+*.pyc
+*.sh
+data/*
+saves/*
+logs/*
