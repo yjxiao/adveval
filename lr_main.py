@@ -126,7 +126,7 @@ def main(args):
     with open(get_savepath(args), 'rb') as f:
         model = torch.load(f)
 
-    test_loss, test_acc = cnn_main.evaluate(corpus.test, model, criterion, device)
+    test_loss, test_acc = cnn_main.evaluate(test, model, criterion, device)
     print('=' * 80)
     print("| End of training | test loss {:5.2f} | test acc {:4.1f}".format(
         test_loss, test_acc * 100))
